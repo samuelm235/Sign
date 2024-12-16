@@ -18,11 +18,11 @@ public class Sign
         String divided = ""; 
         for(int i = 0; i < message.length(); i += wide)
         {
-            if(i + wide > message.length())
+            if(i + wide >= message.length())
             {
                 divided += message.substring(i);
             }
-            divided += message.substring(i,i+wide) + ";";
+            else divided += message.substring(i,i+wide) + ";";
         }
         return divided;
     }
